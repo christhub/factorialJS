@@ -1,31 +1,34 @@
-// var factorial = function(number) {
-//   var result = 1;
-//     if (number > 0) {
-//         result = number * result;
-//         factorial(number - 1);
-//       }
-//     else if (number === 0) {
-//       return result;
-//     }
-//     else {
-//       return result;
-//     }
-// };
 
 
+///this is done with recursion.
 var factorials = function(number) {
-  var result = 1;
-  for (var i = 1; i <= number; i++) {
-     if (number === 0) {
-       result;
-     }
-     else if (number !== 0) {
-       result = i * result;
-     }
+var result = 1;
+  if (number === 0) {
+    result;
+  } else if (number > 0) {
+    result = number * factorials(number - 1);
+  } else {
+    return "not a number";
   }
-
   return result;
 };
+
+
+
+// This is a way to do it without recursion.
+// var factorials = function(number) {
+//   var result = 1;
+//   for (var i = 1; i <= number; i++) {
+//      if (number === 0) {
+//        result;
+//      }
+//      else if (number !== 0) {
+//        result = i * result;
+//      }
+//   }
+//
+//   return result;
+// };
 
 
 $(document).ready(function(){
